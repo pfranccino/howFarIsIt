@@ -6,10 +6,11 @@ let getData = async(origins, finals, mode) => {
     let encodeOrigin = encodeURI(origins)
     let encodeFinal = encodeURI(finals)
     let encodeMode = encodeURI(mode)
+    let encodeAPI = encodeURI('')
 
 
 
-    let answers = await axios.get(`https://maps.googleapis.com/maps/api/distancematrix/json?origins=${encodeOrigin}&destinations=${encodeFinal}&mode=${encodeMode}&key=`)
+    let answers = await axios.get(`https://maps.googleapis.com/maps/api/distancematrix/json?origins=${encodeOrigin}&destinations=${encodeFinal}&mode=${encodeMode}&key=${encodeAPI}`)
 
     let element = answers.data.rows[0].elements[0];
 
