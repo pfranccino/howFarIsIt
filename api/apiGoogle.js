@@ -3,10 +3,10 @@ const axios = require('axios');
 
 let getData = async(origins, finals, mode) => {
 
-    let encodeOrigin = encodeURI(origins)
-    let encodeFinal = encodeURI(finals)
-    let encodeMode = encodeURI(mode)
-    let encodeAPI = encodeURI('')
+    let encodeOrigin = encodeURI(origins);
+    let encodeFinal = encodeURI(finals);
+    let encodeMode = encodeURI(mode);
+    let encodeAPI = encodeURI('');
 
 
 
@@ -18,9 +18,8 @@ let getData = async(origins, finals, mode) => {
 
         throw new Error('La distancia no ha podida ser calculada por nuestros proveedores');
 
-
-
     } else {
+        
         let point = answers.data;
         let distancia = element.distance;
         let time = element.duration;
